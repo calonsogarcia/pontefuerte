@@ -25,14 +25,14 @@ const capitalized = (string) => string[0].toUpperCase() + string.slice(1).toLowe
 app.locals.title = `${capitalized(projectName)}`;
 
 // 👇 Start handling routes here
-const inicio = require("./routes/inicio");
-app.use("/", inicio);
+const home = require("./routes/home");
+app.use("/", home);
 
-const articulo = require("./routes/articulos.routes");
-app.use("/articulos", articulo);
+const products = require("./routes/product.routes");
+app.use("/productos", products);
 
-const cesta = require("./routes/cesta.routes");
-app.use("/carrito", cesta);
+const cart = require("./routes/cart.routes");
+app.use("/carrito", cart);
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
