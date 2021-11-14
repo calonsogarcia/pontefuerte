@@ -39,5 +39,16 @@ module.exports = (app) => {
   // Handles access to the favicon
   app.use(favicon(path.join(__dirname, "..", "public", "images", "favicon.ico")));
 
-
+  app.use(session({
+    secret: process.env.SECRET_SESSION,
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+        maxAge: 60 * 60 * 24 * 7
+    },
+    store: MongoStore.create({
+        mongoUrl: process.env.MONGODB_URI || "mongodb://localhost/puppyfy",
+        ttl: 60 * 60 * 24
+    })
+  }))
 };
