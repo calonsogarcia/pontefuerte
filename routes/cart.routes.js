@@ -5,6 +5,10 @@ router.get("/", (req, res, next) => {
     res.render("cart/cart.hbs");
   });
 
+  router.get("/:id", (req, res, next) => {
+    res.render("cart/cart.hbs");
+  });
+
 router.get("/pago", (req, res, next) => {
     res.render("cart/payment.hbs");
   });

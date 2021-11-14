@@ -1,3 +1,24 @@
 {{!-- Crear lista de artículos --}}
 
-<h1>Hola</h1>
+{{!-- <div class="container mt-5 mb-5">
+    <h1>Aquí encontrarás lo que buscas!</h1> --}}
+
+    {{#each allProducts}}
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{this.image}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{this.name}}</h5>
+                        <p class="card-text">{{this.description}}</p>
+                        <p class="card-text">{{this.price}}</p>
+                        <a href="/productos/{{this._id}}" class="btn btn-primary">Ver más</a>
+                        <a href="/carrito/{{this._id}}" class="btn btn-primary">Lo quiero!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+{{!-- 
+</div> --}}
+
