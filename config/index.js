@@ -18,6 +18,7 @@ const favicon = require("serve-favicon");
 const path = require("path");
 
 const session = require('express-session');
+const MongoStore = require('connect-mongo')
 
 // Middleware configuration
 module.exports = (app) => {
