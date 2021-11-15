@@ -1,7 +1,6 @@
 {{!-- Crear formulario de pago--}}
 
 <div class="container d-lg-flex">
-
     <div class="box-2">
         <div class="box-inner-2">
             <div>
@@ -10,27 +9,40 @@
             </div>
             <form action="">
                 <div class="mb-3">
-                    <p class="dis fw-bold mb-2">Email</p> <input class="form-control" type="email" placeholder="ejemplo@ejemplo.com">
+                    <p class="dis fw-bold mb-2">Email</p> 
+                    <input class="form-control" type="email" placeholder="ejemplo@ejemplo.com">
                 </div>
                 <div>
                     <p class="dis fw-bold mb-2">Tarjeta de crédito</p>
                     <div class="d-flex align-items-center justify-content-between card-atm border rounded">
-                        <div class="fab fa-cc-visa ps-3"></div> <input type="text" class="form-control" placeholder="Nº de tarjeta">
-                        <div class="d-flex w-50"> <input type="text" class="form-control px-0" placeholder="MM/YY"> <input type="password" maxlength=3 class="form-control px-0" placeholder="CVV"> </div>
+                        <div class="fab fa-cc-visa ps-3">
+                            <input type="text" class="form-control" placeholder="Nº de tarjeta">
+                        </div>
+                        <div class="d-flex w-50"> 
+                            <input type="text" class="form-control px-0" placeholder="MM/YY"> 
+                            <input type="password" maxlength=3 class="form-control px-0" placeholder="CVV">
+                        </div>
                     </div>
                     <div class="my-3 cardname">
-                        <p class="dis fw-bold mb-2">Nombre del titular de la tarjeta</p> <input class="form-control" type="text">
+                        <p class="dis fw-bold mb-2">Nombre del titular de la tarjeta</p>
+                        <input class="form-control" type="text">
                     </div>
                     <div class="my-3 cardname">
                         <p class="dis fw-bold mb-2">Dirección de facturación</p>
                         <input class="form-control" type="text">
-                        <div class="d-flex"> <input class="form-control zip" type="text" placeholder="C.P."> <input class="form-control state" type="text" placeholder="CC.AA"> </div>
+                        <div class="d-flex">
+                            <input class="form-control zip" type="text" placeholder="C.P.">
+                            <input class="form-control state" type="text" placeholder="CC.AA">
+                        </div>
                         <div class=" my-3">
                             <p class="dis fw-bold mb-2">DNI</p>
-                            <div class="inputWithcheck"> <input class="form-control" type="text" placeholder="XXXXXXXX-G"> <span class="fas fa-check"></span> </div>
+                            <div class="inputWithcheck">
+                                <input class="form-control" type="text" placeholder="XXXXXXXX-G">
+                                <span class="fas fa-check"></span>
+                            </div>
                         </div>
                     </div>
-                        <div class="d-flex flex-column dis">
+                    <div class="d-flex flex-column dis">
                             <div class="d-flex align-items-center justify-content-between mb-2">
                                 <p>Subtotal</p>
                                 <p><span class="fas fa-dollar-sign"></span>Aquí debería aparecer el precio</p>
@@ -46,7 +58,6 @@
                             <div class="btn btn-primary mt-2">
                                 <a href="/" class="btn btn-primary">Pagar</a>
                             </div>
-                        </div>
                     </div>
                 </div>
             </form>
