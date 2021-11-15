@@ -8,7 +8,7 @@ router.get("/", (req, res, next) => {
     res.render("cart/cart.hbs");
   });
 
-router.get("/:id", (req, res, next) => {
+/* router.get("/:id", (req, res, next) => {
   const {cartId} = req.params.id;
   Cart.findById(cartId)
     .populate('product_id')
@@ -16,7 +16,7 @@ router.get("/:id", (req, res, next) => {
       res.redirect("/carrito", {product});
     })
     .catch((err) => {next(err)});
-  }); 
+  });  */
 
 router.get("/pago", (req, res, next) => {
     res.render("cart/payment.hbs");
